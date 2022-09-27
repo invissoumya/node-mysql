@@ -1,0 +1,17 @@
+<h1>Hello</h1>
+<form action="/" method="post" enctype="multipart/form-data">
+<h3>Upload Profile Photo</h3>
+<input type="file" name="samplefile" id="samplefile" accept="image/*">
+<input type="submit" class="btn btn-primary">
+</form>
+<br/>
+<div class="card">
+    {{#each rows}}
+    <img calss="card__image" src="{{this.profile_image}}" alt="">
+    <h1 class="card__title">{{this.name}}</h1>
+    <div class="card__job">{{this.designation}}</div>
+    <p class="card__about">{{this.description}}</p>
+    <button type="button" class="btn btn-primary">View Profile</button>
+
+    {{/each}}
+</div>
